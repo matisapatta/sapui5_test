@@ -2,17 +2,18 @@
 	displayBlock="true" xmlns="sap.m" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
 	<SplitApp id="SplitAppDemo" initialMaster="master" initialDetail="detail">
 		<masterPages>
-			<Page id="master" title="Domains">
+			<Page id="master" title="Aplicaciones">
 				<content>
-					<List itemPress="onMasterListItemPress">
+					<!-- <List itemPress="onMasterListItemPress"> -->
+					<List itemPress="onDetailListItemPress">
 						<items>
-							<StandardListItem title="Dataset Services 1" type="Navigation" custom:to="sub_master_dataset"/>
-							<StandardListItem title="Forecast Services 1" type="Navigation" custom:to="sub_master_forecast"/>
+							<StandardListItem title="Ver Facturas" type="Active" custom:to="detail_dataset_register"/>
+							<StandardListItem title="Ver Pagos" type="Active" custom:to="detail_dataset_manage"/>
 						</items>
 					</List>
 				</content>
 			</Page>
-			<Page id="sub_master_dataset" title="Dataset Services" showNavButton="true" navButtonPress="onPressMasterBack">
+			<!-- <Page id="sub_master_dataset" title="Facturas" showNavButton="true" navButtonPress="onPressMasterBack">
 				<content>
 					<List itemPress="onDetailListItemPress">
 						<items>
@@ -22,7 +23,7 @@
 					</List>
 				</content>
 			</Page>
-			<Page id="sub_master_forecast" title="Forecast Services" showNavButton="true" navButtonPress="onPressMasterBack">
+			<Page id="sub_master_forecast" title="Pagos" showNavButton="true" navButtonPress="onPressMasterBack">
 				<content>
 					<List itemPress="onDetailListItemPress">
 						<items>
@@ -31,20 +32,20 @@
 						</items>
 					</List>
 				</content>
-			</Page>
+			</Page> -->
 		</masterPages>
 		<detailPages>
-			<Page id="detail" title="Test the SAP Predictive Service in a SAPUI5 application">
+			<Page id="detail" title="Servicios del proveedor">
 				<content></content>
 			</Page>
-			<Page id="detail_dataset_register" title="Register your Dataset with the SAP Predictive services">
+			<Page id="detail_dataset_register" title="Facturas enviadas">
 				<content>
 				<mvc:XMLView viewName="pspredictive.view.dataset.register"/>
 				</content>
 			</Page>
-			<Page id="detail_dataset_manage" title="Manage your Data Set with the SAP Predictive services">
+			<Page id="detail_dataset_manage" title="Consulta de pagos">
 				<content>
-					<!--<mvc:XMLView viewName="pspredictive.view.dataset.manage"/>-->
+					<mvc:XMLView viewName="pspredictive.view.dataset.pagos"/>
 				</content>
 			</Page>
 			<Page id="detail_forecast_synchronous" title="Forecast with the SAP Predictive services (Synchronous Mode)">

@@ -4,15 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "grunt serve",
+    "build": "grunt build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/matisapatta/sapui5_test.git"
-  },
-  "scripts": {
-    "start": "grunt serve",
-    "build": "grunt build"
   },
   "author": "",
   "license": "ISC",
@@ -26,5 +23,9 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-openui5": "^0.14.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
   }
 }

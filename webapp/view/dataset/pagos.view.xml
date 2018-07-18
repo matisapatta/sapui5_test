@@ -1,0 +1,159 @@
+<mvc:View controllerName="pspredictive.controller.dataset.pagos" xmlns:html="http://www.w3.org/2000/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:table="sap.ui.table"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+
+		<!-- <form:SimpleForm title="Please select a dataset from the list then press Register">
+		<FlexBox>
+			<InputListItem label="Datasets">
+				<Select id="idSelectDataset">
+					<core:Item key="PSDEMO/CashFlow" text="Cash Flow (PSDEMO/CashFlow)"/>
+					<core:Item key="PSDEMO/Census" text="Census (PSDEMO/Census)"/>
+					<core:Item key="PSDEMO/Transactions" text="E-Commerce transactions (PSDEMO/Transactions)"/>
+				</Select>
+			</InputListItem>
+		</FlexBox>
+		<FlexBox><Button text="Register Dataset" type="Default" press="register" custom:input="idSelectDataset"/></FlexBox>
+	</form:SimpleForm> -->
+
+<form:Form editable="false" class="isReadonly">
+			<form:title>
+				<core:Title text="Por favor, elegir criterios de búsqueda para los pagos"/>
+			</form:title>
+			<form:layout>
+				<form:ResponsiveGridLayout 
+				columnsL="1" 
+				columnsM="1"
+				/>
+			</form:layout>
+			<form:formContainers>
+				<form:FormContainer>
+					<form:formElements>
+						<form:FormElement label="Sociedad">
+							<form:fields>
+								<!-- <Text text="Pepe"/> -->
+								<Select id="soceidad1">
+								<core:Item key="T001" text="T001"/>
+								<core:Item key="T001" text="S001"/>
+								<core:Item key="T001" text="S002"/>
+								</Select>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement label="Fecha desde">
+							<form:fields>
+							<DatePicker id="fechadesde1"></DatePicker>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement label="Fecha hasta">
+							<form:fields>
+							<DatePicker id="fechahasta1"></DatePicker>
+							</form:fields>
+						</form:FormElement>
+                        <form:FormElement>
+							<form:fields>
+								<Button text="Buscar" type="Default" press="register" custom:input="idSelectDataset"/>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements>
+				</form:FormContainer>
+			</form:formContainers>
+		</form:Form>
+
+
+
+
+
+	<Panel expandable="false" expanded="true" >
+		<!-- <form:Form editable="false" class="isReadonly">
+			<form:title>
+				<core:Title text="Dataset Registration Details"/>
+			</form:title>
+			<form:layout>
+				<form:ResponsiveGridLayout columnsL="1" columnsM="1"/>
+			</form:layout>
+			<form:formContainers>
+				<form:FormContainer>
+					<form:formElements>
+						<form:FormElement label="Dataset ID">
+							<form:fields>
+								<Text text="{dataset_register>/dataset/ID}"/>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement label="Dataset Name">
+							<form:fields>
+								<Text text="{dataset_register>/dataset/name}"/>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement label="Number Of rows">
+							<form:fields>
+								<Text text="{dataset_register>/dataset/numberOfRows}"/>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement label="Number Of Columns">
+							<form:fields>
+								<Text text="{dataset_register>/dataset/numberOfColumns}"/>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements>
+				</form:FormContainer>
+			</form:formContainers>
+		</form:Form> -->
+		<table:Table rows="{dataset_register>/dataset/variables}" enableBusyIndicator="true" selectionMode="None" visibleRowCount="5" width="100%">
+			<table:columns>
+				<table:Column>
+					<Label text="Nro Orden de Pago"/>
+					<table:template>
+						<Text text="{dataset_register>position}"/>
+					</table:template>
+				</table:Column>
+				<table:Column>
+					<Label text="Fecha Documento"/>
+					<table:template>
+						<Text text="{dataset_register>name}"/>
+					</table:template>
+				</table:Column>
+				<table:Column>
+					<Label text="Pago Total"/>
+					<table:template>
+						<Text text="{dataset_register>storage}"/>
+					</table:template>
+				</table:Column>
+				<table:Column>
+					<Label text="Importe neto"/>
+					<table:template>
+						<Text text="{dataset_register>value}"/>
+					</table:template>
+				</table:Column>
+				<table:Column>
+					<Label text="Moneda"/>
+					<table:template>
+						<Text text="{dataset_register>value}"/>
+					</table:template>
+				</table:Column>
+				<table:Column>
+					<Label text="Forma de pago"/>
+					<table:template>
+						<Text text="{dataset_register>value}"/>
+					</table:template>
+				</table:Column>
+				<table:Column>
+					<Label text="Nro de Cheque"/>
+					<table:template>
+						<Text text="{dataset_register>value}"/>
+					</table:template>
+				</table:Column>
+				<table:Column>
+					<Label text="Lugar de pago"/>
+					<table:template>
+						<Text text="{dataset_register>value}"/>
+					</table:template>
+				</table:Column>
+				<table:Column>
+					<Label text="Sociedad"/>
+					<table:template>
+						<Text text="{dataset_register>value}"/>
+					</table:template>
+				</table:Column>
+			</table:columns>
+		</table:Table>
+	</Panel>
+</mvc:View>
