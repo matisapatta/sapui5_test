@@ -15,7 +15,7 @@ sap.ui.define([
 			var oBusyIndicator = new sap.m.BusyDialog();
 			oBusyIndicator.open();
 
-			var oList = this.getView().byId(oEvent.getSource().getCustomData()[0].getValue());
+			// var oList = this.getView().byId(oEvent.getSource().getCustomData()[0].getValue());
 			// define the service parameters
 			// var param = {
 			// 	hanaURL: oList.getSelectedItem().getKey()

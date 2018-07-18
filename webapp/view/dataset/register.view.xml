@@ -50,7 +50,11 @@
 						</form:FormElement>
 						<form:FormElement label="Pendiente de pago">
 							<form:fields>
-								<Checkbox/>
+								<!-- <Checkbox/> -->
+								<Select id="pendiente">
+								<core:Item key="si" text="Sí"/>
+								<core:Item key="no" text="No"/>
+								</Select>
 							</form:fields>
 						</form:FormElement>
 						<form:FormElement>
