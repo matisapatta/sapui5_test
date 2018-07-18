@@ -123,43 +123,43 @@
 				<table:Column>
 					<Label text="Tipo de Comprobante"/>
 					<table:template>
-						<Text text="{dataset_register>sociedad}"/>
+						<Text text="{dataset_register>comprobante}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Fecha de Documento"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_register>fechadoc}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Importe Neto"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_register>impneto}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Importe bruto"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_register>impbruto}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Moneda"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_register>moneda}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Número de Orden de Pago"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_register>op}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Fecha estimada de pago"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_register>fechapago}"/>
 					</table:template>
 				</table:Column>
 			</table:columns>
