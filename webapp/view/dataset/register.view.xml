@@ -33,8 +33,8 @@
 								<!-- <Text text="Pepe"/> -->
 								<Select id="sociedad">
 								<core:Item key="T001" text="T001"/>
-								<core:Item key="T001" text="S001"/>
-								<core:Item key="T001" text="S002"/>
+								<core:Item key="S001" text="S001"/>
+								<core:Item key="S002" text="S002"/>
 								</Select>
 							</form:fields>
 						</form:FormElement>
@@ -59,7 +59,7 @@
 						</form:FormElement>
 						<form:FormElement>
 							<form:fields>
-								<Button text="Buscar" type="Default" press="register" custom:input="idSelectDataset"/>
+								<Button text="Buscar" type="Default" press="register" custom:input="sociedad"/>
 							</form:fields>
 						</form:FormElement>
 					</form:formElements>
