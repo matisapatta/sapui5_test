@@ -45,6 +45,7 @@ sap.ui.define([
 			}
 			var xmlhttp = eval(json);
 			var pagos = xmlhttp.pagos;
+			console.log(_sociedad)
 			
 			if(_fechadesde=="" || _fechahasta == ""){
 				
