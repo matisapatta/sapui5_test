@@ -74,7 +74,7 @@ sap.ui.define([
 					var filtered = facturas.filter(function (el) {
 						return el.sociedad == _sociedad &&
 						el.fechadoc.split('/')[2] + el.fechadoc.split('/')[1] + el.fechadoc.split('/')[0] >= 20+_fechadesde.split('/')[2]+_fechadesde.split('/')[1]+_fechadesde.split('/')[0] &&
-						el.fechadoc.split('/')[2] + el.fechadoc.split('/')[1] + el.fechadoc.split('/')[0] <= 20+a_fechahasta.split('/')[2]+_fechahasta.split('/')[1]+_fechahasta.split('/')[0] &&
+						el.fechadoc.split('/')[2] + el.fechadoc.split('/')[1] + el.fechadoc.split('/')[0] <= 20+_fechahasta.split('/')[2]+_fechahasta.split('/')[1]+_fechahasta.split('/')[0] &&
 						el.fechapago != "";
 					  });
 				}
