@@ -106,7 +106,7 @@
 				</form:FormContainer>
 			</form:formContainers>
 		</form:Form> -->
-		<table:Table rows="{dataset_register>/dataset/variables}" enableBusyIndicator="true" selectionMode="None" visibleRowCount="5" width="100%">
+		<table:Table rows="{dataset_register>/dataset/}" enableBusyIndicator="true" selectionMode="None" visibleRowCount="5" width="100%">
 			<table:columns>
 				<table:Column>
 					<Label text="Factura"/>

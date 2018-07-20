@@ -31,7 +31,7 @@
 						<form:FormElement label="Sociedad">
 							<form:fields>
 								<!-- <Text text="Pepe"/> -->
-								<Select id="soceidad1">
+								<Select id="sociedad1">
 								<core:Item key="T001" text="T001"/>
 								<core:Item key="T001" text="S001"/>
 								<core:Item key="T001" text="S002"/>
@@ -50,7 +50,7 @@
 						</form:FormElement>
                         <form:FormElement>
 							<form:fields>
-								<Button text="Buscar" type="Default" press="register" custom:input="idSelectDataset"/>
+								<Button text="Buscar" type="Default" press="register" />
 							</form:fields>
 						</form:FormElement>
 					</form:formElements>
@@ -97,60 +97,60 @@
 				</form:FormContainer>
 			</form:formContainers>
 		</form:Form> -->
-		<table:Table rows="{dataset_register>/dataset/variables}" enableBusyIndicator="true" selectionMode="None" visibleRowCount="5" width="100%">
+		<table:Table rows="{dataset_pagos>/dataset/}" enableBusyIndicator="true" selectionMode="None" visibleRowCount="5" width="100%">
 			<table:columns>
 				<table:Column>
 					<Label text="Nro Orden de Pago"/>
 					<table:template>
-						<Text text="{dataset_register>position}"/>
+						<Text text="{dataset_pagos>op}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Fecha Documento"/>
 					<table:template>
-						<Text text="{dataset_register>name}"/>
+						<Text text="{dataset_pagos>fechapago}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Pago Total"/>
 					<table:template>
-						<Text text="{dataset_register>storage}"/>
+						<Text text="{dataset_pagos>impbruto}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Importe neto"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_pagos>impneto}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Moneda"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_pagos>moneda}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Forma de pago"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_pagos>formapago}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Nro de Cheque"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_pagos>nrocheque}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Lugar de pago"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_pagos>lugar}"/>
 					</table:template>
 				</table:Column>
 				<table:Column>
 					<Label text="Sociedad"/>
 					<table:template>
-						<Text text="{dataset_register>value}"/>
+						<Text text="{dataset_pagos>sociedad}"/>
 					</table:template>
 				</table:Column>
 			</table:columns>
